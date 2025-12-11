@@ -1,0 +1,301 @@
+:root {
+  --utama: #0077ff;
+  --kedua: #ffffff;
+  --bg: #008cff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", cursive;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background-color: var(--bg);
+  max-height: 90px;
+  position: fixed;
+  width: 100%;
+  height: auto; 
+  flex-wrap: wrap; 
+}
+
+.navbar .logo a {
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+}
+
+.navbar-item {
+  background-color: var(--bg);
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-item a {
+  color: var(--kedua);
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-item a:hover {
+  color: navy;
+}
+
+
+main {
+  background-color: var(--utama);
+  height: 2500px; /* UKURAN BACKGROUND AWAL */
+  padding-top: 90px;
+}
+
+.nama {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 100px;
+}
+
+.p1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.p2 {
+  font-size: 40px;
+  margin: 0px;
+  color: white;
+  display: inline-flex;
+}
+
+.btn {
+  margin-top: 30px;
+  padding: 12px 35px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: #1a2a4f;
+}
+
+.about-me {
+  scroll-margin-top: 100px; /* biar pas di pencet navbar bagian "about me" dia ke scroll" */
+}
+
+.about-me h3 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 60px;
+  color: white;
+}
+
+.about-box {
+  background-color: #2a55ab;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 30px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.cv-btn {
+  display: inline-flex;
+  background-color: #1a2a4f;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.cv-btn i {
+  font-size: 16px;
+}
+
+.about-box {
+  background-color: #0f3374;
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.my-skill h3 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 100px;
+  color: white;
+}
+
+.my-skill {
+  text-align: center;
+  margin-top: 100px;
+  scroll-margin-top: 100px;
+}
+
+.my-skill .skill-box {
+  justify-content: center;
+  display: flex;
+  background-color: #1a2a4f;
+  color: white;
+  padding: 50px;
+  border-radius: 8px;
+  font-weight: bold;
+  width: 170px;
+  height: 150px;
+  font-size: 25px;
+  margin-top: 10px; /* ini kunci dri 4 elemen yg di my skill biar di yg tadinya di atas jd ke tengah */
+}
+
+.my-skill .skill-container {
+  gap: 50px;
+  background-color: #0f3374;
+  padding: 30px;
+  border-radius: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  width: 900px;
+  height: auto;
+}
+
+.my-project {
+  text-align: center;
+  margin-top: 100px;
+  scroll-margin-top: 100px; /* biar pas di pencet di navbar bagian "my project bs ke arah project */
+}
+
+.my-project h3 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+.my-project .project-container {
+  gap: 50px;
+  background-color: #0f3374;
+  padding: 30px;
+  border-radius: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  width: 900px;
+  height: auto;
+}
+
+.my-project .anak-project {
+  justify-content: center;
+  display: flex;
+  background-color: #1a2a4f;
+  color: white;
+  padding: 50px;
+  border-radius: 8px;
+  font-weight: bold;
+  width: 170px;
+  height: 150px;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.contact {
+  margin-top: 100px;
+  text-align: center;
+  color: white;
+}
+
+.contact h3 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background-color: #0f3374;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+.contact input, .contact textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.contact button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1a2a4f;
+  color: white;
+  font-size: 18px;
+}
+
+.contact button:hover {
+  background-color: #27457a;
+}
+
+.contact-info {
+  text-align: left;
+  font-size: 16px;
+}
+
+/* MODE HANDPHONE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px 10px;
+  }
+
+  .navbar-item {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .navbar-item a {
+    font-size: 20px;
+  }
+}

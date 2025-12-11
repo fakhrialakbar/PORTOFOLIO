@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+  />
+
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#">Fakhrial <span style="color: #000080">Portfolio</span></a>
+    </div>
+
+    <div class="navbar-item">
+      <a href="#">Home</a>
+      <a href="#about-me">About Me</a>
+      <a href="#my-skill">My Skill</a>
+      <a href="#my-project">My Project</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  
+  <main>
+    
+    <div class="nama">
+      <p class="p1">
+        Hi, I'm <span style="color: #1a2a4f">Fakhrial Akbar</span>
+      </p>
+      <p class="p2">UI UX Designer</p>
+      <button class="btn">Get Started</button>
+    </div>
+
+
+    <div class="about-me" id="about-me">
+      <h3>About Me</h3>
+      <div class="about-box">
+        <p>
+          Welcome to my portfolio, I am a student of SMK Taruna Bhakti, 
+          I am from class 10 RPL 4. I entered RPL because I want to be a good 
+          programmer, and I want to develop the applications that I make.
+        </p>
+        <a href="/asset/tolongaku.png" class="cv-btn">Download CV</a>
+      </div>
+    </div>
+
+ 
+    <div class="my-skill" id="my-skill">  
+      <h3>My Skill</h3>
+      <div class="skill-container">
+        <div class="skill-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" />
+        </div>
+        <div class="skill-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" />
+        </div>
+        <div class="skill-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Figma" />
+        </div>
+        <div class="skill-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png" alt="Adobe Photoshop" />
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="my-project" id="my-project">
+      <h3>My Project</h3>
+      <div class="project-container">
+        <div class="anak-project">Tracing Karakter</div>
+        <div class="anak-project">Tracing Poster</div>
+        <div class="anak-project">Figma</div>
+        <div class="anak-project">Todo List</div>
+      </div>
+    </div>
+
+   
+<div class="contact" id="contact">
+  <h3>Contact Me</h3>
+  <div class="contact-container">
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <p>Email: fakhrialakbar29@gmail.com</p>
+      <p>Phone: +62 8976543210</p>
+    </div>
+  </div>
+</div>
+  </main>
+
+  <!-- ICON REPLACEMENT -->
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
