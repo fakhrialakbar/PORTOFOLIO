@@ -16,7 +16,6 @@ body {
   background-color: var(--utama);
 }
 
-
 .navbar {
   display: flex;
   align-items: center;
@@ -28,7 +27,7 @@ body {
   width: 100%;
   top: 0;
   z-index: 9999;
-  flex-wrap: nowrap; /* FIX: biar nav ga turun */
+  flex-wrap: nowrap;
 }
 
 .navbar .logo a {
@@ -60,36 +59,6 @@ body {
   cursor: pointer;
   z-index: 99999;
 }
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .navbar-item {
-    position: absolute;
-    top: 90px;
-    right: 20px;
-    background: var(--bg);
-    padding: 20px;
-    border-radius: 10px;
-
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    width: 200px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  }
-
-  .navbar-item.active {
-    display: flex;
-  }
-
-  .menu-toggle.active {
-    display: none;
-  }
-}
-
 
 main {
   background-color: var(--utama);
@@ -131,8 +100,6 @@ main {
   background: white;
   color: #1a2a4f;
 }
-
-
 
 .about-me {
   scroll-margin-top: 100px;
@@ -206,7 +173,6 @@ main {
   font-size: 25px;
   margin-top: 10px;
 }
-
 
 .my-project {
   text-align: center;
@@ -299,4 +265,32 @@ main {
 .contact-info {
   text-align: left;
   font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-item {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .navbar-item.active {
+    display: flex;
+  }
+
+  .menu-toggle.active {
+    display: none;
+  }
 }
