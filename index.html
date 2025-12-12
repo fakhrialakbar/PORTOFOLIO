@@ -27,7 +27,7 @@
 
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     
-    <div class="navbar-item">
+    <div class="navbar-item" id="navMenu">
       <a href="#">Home</a>
       <a href="#about-me">About Me</a>
       <a href="#my-skill">My Skill</a>
@@ -111,6 +111,9 @@
   <!-- ICON REPLACEMENT -->
   <script>
     feather.replace();
+    function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("active");
+}
   </script>
 </body>
 </html>

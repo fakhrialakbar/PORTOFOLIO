@@ -13,8 +13,9 @@
 }
 
 body {
-  background-color: var(--utama); 
+  background-color: var(--utama);
 }
+
 
 .navbar {
   display: flex;
@@ -25,8 +26,9 @@ body {
   max-height: 90px;
   position: fixed;
   width: 100%;
-  height: auto; 
-  flex-wrap: wrap; 
+  top: 0;
+  z-index: 9999;
+  flex-wrap: nowrap; /* FIX: biar nav ga turun */
 }
 
 .navbar .logo a {
@@ -37,7 +39,6 @@ body {
 
 .navbar-item {
   background-color: var(--bg);
-  padding: 0;
   display: flex;
   gap: 30px;
 }
@@ -46,17 +47,53 @@ body {
   color: var(--kedua);
   font-size: 22px;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .navbar-item a:hover {
   color: navy;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-item {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 10px;
+
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .navbar-item.active {
+    display: flex;
+  }
+
+  .menu-toggle.active {
+    display: none;
+  }
+}
+
 
 main {
   background-color: var(--utama);
-  height: 2500px; /* UKURAN BACKGROUND AWAL */
+  height: 2500px;
   padding-top: 90px;
 }
 
@@ -64,22 +101,18 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   padding-top: 100px;
 }
 
 .p1 {
   font-size: 60px;
   font-weight: bold;
-  margin: 0;
   color: white;
 }
 
 .p2 {
   font-size: 40px;
-  margin: 0px;
   color: white;
-  display: inline-flex;
 }
 
 .btn {
@@ -91,7 +124,7 @@ main {
   background: transparent;
   color: white;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 .btn:hover {
@@ -99,43 +132,17 @@ main {
   color: #1a2a4f;
 }
 
+
+
 .about-me {
-  scroll-margin-top: 100px; /* biar pas di pencet navbar bagian "about me" dia ke scroll" */
+  scroll-margin-top: 100px;
 }
 
 .about-me h3 {
   font-size: 50px;
-  margin-bottom: 20px;
   text-align: center;
   margin-top: 60px;
   color: white;
-}
-
-.about-box {
-  background-color: #2a55ab;
-  max-width: 950px;
-  margin: 0 auto;
-  padding: 30px;
-  border-radius: 20px;
-  font-size: 30px;
-  text-align: left;
-  color: #ffffff;
-}
-
-.cv-btn {
-  display: inline-flex;
-  background-color: #1a2a4f;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 20px;
-  transition: all 0.3s ease;
-}
-
-.cv-btn i {
-  font-size: 16px;
 }
 
 .about-box {
@@ -144,16 +151,24 @@ main {
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
+  margin: 20px auto;
+  max-width: 950px;
 }
 
-.my-skill h3 {
-  font-size: 50px;
-  margin-bottom: 20px;
-  text-align: center;
-  margin-top: 100px;
+.cv-btn {
+  display: inline-flex;
+  background-color: #1a2a4f;
   color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  margin-top: 20px;
+  transition: 0.3s;
 }
+
+.cv-btn:hover {
+  background-color: #27457a;
+}
+
 
 .my-skill {
   text-align: center;
@@ -161,21 +176,12 @@ main {
   scroll-margin-top: 100px;
 }
 
-.my-skill .skill-box {
-  justify-content: center;
-  display: flex;
-  background-color: #1a2a4f;
+.my-skill h3 {
+  font-size: 50px;
   color: white;
-  padding: 50px;
-  border-radius: 8px;
-  font-weight: bold;
-  width: 170px;
-  height: 150px;
-  font-size: 25px;
-  margin-top: 10px; /* ini kunci dri 4 elemen yg di my skill biar di yg tadinya di atas jd ke tengah */
 }
 
-.my-skill .skill-container {
+.skill-container {
   gap: 50px;
   background-color: #0f3374;
   padding: 30px;
@@ -184,25 +190,36 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 100%;
   width: 900px;
-  height: auto;
+  max-width: 100%;
 }
+
+.skill-box {
+  display: flex;
+  justify-content: center;
+  background-color: #1a2a4f;
+  color: white;
+  padding: 50px;
+  border-radius: 8px;
+  width: 170px;
+  height: 150px;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
 
 .my-project {
   text-align: center;
   margin-top: 100px;
-  scroll-margin-top: 100px; /* biar pas di pencet di navbar bagian "my project bs ke arah project */
+  scroll-margin-top: 100px;
 }
 
 .my-project h3 {
   font-size: 50px;
-  margin-bottom: 20px;
-  text-align: center;
   color: white;
 }
 
-.my-project .project-container {
+.project-container {
   gap: 50px;
   background-color: #0f3374;
   padding: 30px;
@@ -211,19 +228,17 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 100%;
   width: 900px;
-  height: auto;
+  max-width: 100%;
 }
 
-.my-project .anak-project {
-  justify-content: center;
+.anak-project {
   display: flex;
+  justify-content: center;
   background-color: #1a2a4f;
   color: white;
   padding: 50px;
   border-radius: 8px;
-  font-weight: bold;
   width: 170px;
   height: 150px;
   font-size: 25px;
@@ -260,7 +275,8 @@ main {
   width: 300px;
 }
 
-.contact input, .contact textarea {
+.contact input, 
+.contact textarea {
   padding: 12px;
   border-radius: 8px;
   border: none;
@@ -283,35 +299,4 @@ main {
 .contact-info {
   text-align: left;
   font-size: 16px;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .navbar-item {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .navbar-item.active {
-    display: flex;
-  }
 }
