@@ -48,7 +48,17 @@ body {
   font-weight: bold;
 }
 
+.navbar-item i {
+  color: var(--kedua);
+  font-size: 22px;
+  font-weight: bold;
+}
+
 .navbar-item a:hover {
+  color: navy;
+}
+
+.navbar-item i:hover {
   color: navy;
 }
 
@@ -69,6 +79,7 @@ main {
 .nama {
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   padding-top: 100px;
 }
@@ -148,6 +159,10 @@ main {
   color: white;
 }
 
+.skill-box:hover {
+  background-color: white
+}
+
 .skill-container {
   gap: 50px;
   background-color: #0f3374;
@@ -172,6 +187,7 @@ main {
   height: 150px;
   font-size: 25px;
   margin-top: 10px;
+
 }
 
 .my-project {
@@ -200,10 +216,11 @@ main {
 
 .anak-project {
   display: flex;
+  text-align: center;
+  align-items: center;
   justify-content: center;
   background-color: #1a2a4f;
   color: white;
-  padding: 50px;
   border-radius: 8px;
   width: 170px;
   height: 150px;
@@ -294,3 +311,4 @@ main {
     display: none;
   }
 }
+
